@@ -9,17 +9,14 @@ let randomNumbers = [];
 
 
 
-generateRandomNumbers();
-viewNumbers();
-startCountdown();
+
 
 function generateRandomNumbers() {
-    let randomNumbers = [];
+    randomNumbers = [];
 
     for (let i = 0; i < 5; i++) {
         randomNumbers.push(Math.floor(Math.random() * 50) + 1);
     }
-    console.log(randomNumbers);
     return randomNumbers;
 }
 
@@ -27,13 +24,10 @@ function generateRandomNumbers() {
 function viewNumbers() {
     for (let i = 0; i < randomNumbers.length; i++) {
         const liElement = document.createElement("li");
-        liItem.innerHTML = randomNumbers[i];
+        liElement.innerHTML = randomNumbers[i];
         listNumbers.appendChild(liElement);
     }
 }
-
-
-
 
 
 function startCountdown() {
@@ -60,5 +54,6 @@ function startCountdown() {
 }
 
 
+generateRandomNumbers();
 viewNumbers();
-
+startCountdown();
